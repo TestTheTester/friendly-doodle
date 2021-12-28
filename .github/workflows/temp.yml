@@ -21,7 +21,7 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - name: Set current date as env variable
-        run: echo "::set-output name=NOW::$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+        run: echo "NOW=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
   job2:
     runs-on: ubuntu-latest
