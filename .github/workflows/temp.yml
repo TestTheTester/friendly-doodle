@@ -29,18 +29,18 @@ jobs:
     steps:
     - run: echo ${{needs.build.outputs.output1}}
     - name: Echo current date
-      run: echo $NOW
+      run: echo ${{env.NOW}}
   job3:
     runs-on: ubuntu-latest
     needs: job2
     steps:
     - run: echo ${{needs.build.outputs.output1}}
     - name: Echo current date
-      run: echo $NOW
+      run: echo ${{env.NOW}}
   job4:
     runs-on: ubuntu-latest
     needs: build
     steps:
     - run: echo ${{needs.build.outputs.output1}}
     - name: Echo current date
-      run: echo $NOW      
+      run: echo ${{env.NOW}}     
